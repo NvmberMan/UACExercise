@@ -7,8 +7,8 @@ import messages.Message;
 
 public class App {
     public static void main(String[] args) {
-        ILogin emailLogin = new BasicLogin("alice", "password123");
-        ILogin smsLogin = new OAuthLogin("token-abc-123");
+        ILogin emailLogin = new BasicLogin("alice", "password123"); //udah masuk ke {"alice, "pass"}
+        ILogin smsLogin = new OAuthLogin("token-abc-123"); // {"", "token"}
 
         Message email = new EmailMessage(emailLogin, "alice@example.com", "bob@example.com", "Hello Bob!");
         Message sms = new SMSMessage(smsLogin, "Alice", "Bob", "Hi Bob, this is Alice.");
