@@ -15,6 +15,11 @@ public class EmailMessage extends Message {
 		this.destEmail = destEmail;
 	}
 
+	//Sudah menerapkan Liskov principle, karena subclasss(class ini) dapat menggantikan class parentnya
+	//tanpa mengubah kebenaran program
+	
+	//Sudah melakukan Dependency Inversion priciple, dengan mengubah modul tingkat tinggi, tingkat rendah
+	//supaya ketika ingin memanggil send, tidak perlu harus spesifik ke subclass, namun bisa secara general terhadap abstractnya
 	@Override
 	public void send(String username, String password) {
 		// TODO Auto-generated method stub
